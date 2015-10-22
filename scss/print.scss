@@ -1,0 +1,28 @@
+p, li, h1, h2, h3, span{
+	font-family: $font-stack;
+}
+
+h1{
+	font-size: $h1-size;
+}
+
+h2{
+	font-size: $h2-size;
+	font-weight: normal;
+}
+
+p{
+	font-size: $p-size;
+}
+
+a{
+	text-decoration: none;
+  transition: color 0.5s ease;
+}
+
+a:hover{
+  transition: color 0.5s ease;
+} 
+
+
+
