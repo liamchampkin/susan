@@ -27,23 +27,43 @@ body{
 .header{
 	background-color: $primary-colour;	
 	height: $header-height;
+	z-index: 3;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
 }
 
-.blue-dark{
-	background-color: $primary-colour;
-	height: 33.333333vh;
+.button-back,
+.visit-website{
+	background-color: darken($primary-colour, 10%);
+	text-align: center;
+
 }
 
 .vertical-column{
 	height: $vertical-button-height;
 	text-align: center;
 	&:hover{
-		width: 30%;
+		width: 40%;
 	}
 	.fa{
 	   margin: 4vh 0;
 	}
 }
+
+// .blue-darken-1::before{
+// 	content: " ";
+// 	background: transparent url('/images/bond-admin-doc.png');
+// 	opacity: 0.08;
+// 	top: 0;
+// 	left: 0;
+// 	bottom: 0;
+// 	right: 0;
+// 	position: absolute;
+// 	z-index: 2;   
+	
+// }
 
 @for $i from 1 through $columns {
   .col-span-#{$i} {
@@ -69,5 +89,12 @@ body{
 	&:hover{
 		background-color: $primary-text-colour;
 		color: $primary-colour;
+	}
+}
+
+.screen{
+	width: 40vw;
+	img{
+		width: 100%; 
 	}
 }
