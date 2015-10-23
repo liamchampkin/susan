@@ -14,6 +14,7 @@ var gulp = require('gulp'),
     inject = require("gulp-inject"),
     livereload = require('gulp-livereload'),
     connect = require('gulp-connect'),
+    autoprefixer = require('gulp-autoprefixer'),
     watch = require('gulp-watch');
 
 // Lint Task
@@ -27,6 +28,15 @@ gulp.task('lint', function() {
 gulp.task('sass', function() {
     return gulp.src('scss/compiled.scss')
         .pipe(sass())
+        .pipe(gulp.dest('site/css'));
+});
+
+gulp.task('autoprefix', function () {
+    return gulp.src('site/compiled.scss')
+        .pipe(autoprefixer({
+            browsers: ['last 3 versions'],
+            cascade: false
+        }))
         .pipe(gulp.dest('site/css'));
 });
 
@@ -78,4 +88,4 @@ gulp.task('watch', function() {
 });
 
 // Default Task
-gulp.task('default', ['lint', 'sass', 'haml-watch', 'scripts', 'watch', 'connect']);
+gulp.task('default', ['lint', 'sass', 'haml-watch', 'autoprefix', 'scripts', 'watch', 'connect']);

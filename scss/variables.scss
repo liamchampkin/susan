@@ -1,21 +1,23 @@
-$columns: 12;
-$primary-colour: #00529C;
-$primary-text-colour: #fff;
-$font-stack: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$columns: 																						12;
+$primary-colour: 																				#146CBA;
+$primary-text-colour: 																		#fff;
+$font-stack: 																					"Helvetica Neue", Helvetica, Arial, sans-serif;
 
-$grid-colours: 5;
-$hue-amount: 4;
+$hover-expand: 																				40%; 
 
-$transition: all .5s;
+$grid-colours: 																				5;
+$hue-amount: 																					5;
 
-$header-height: 50vh;
+$transition: 																					all .5s;
 
-$vertical-button-height: 100vh - $header-height; 
+$header-height: 																				50vh;
+
+$vertical-button-height: 																	100vh - $header-height; 
  
 //fonts
-$h1-size: 4vh;
-$h2-size: 3vh;
-$h3-size: 20px;
-$p-size: 2vh; 
-$line-height: 1.5;
+$h1-size: 																						4vh;
+$h2-size: 																						3vh;
+$h3-size: 																						20px;
+$p-size: 																						2vh; 
+$line-height: 																					1.5;
  
